@@ -28,5 +28,7 @@ for ($i=0; $data=fgetcsv($f,1000,";"); $i++) {
 }
 fclose($f);
 $num_tarif = $i;
-
+//отделение минут от секунд
+for ($i=0; $i<$num_history; $i++)
+	$MM_SS[$i] = explode(":", $A[$i]['prodolzh'], 2);
 ?>
